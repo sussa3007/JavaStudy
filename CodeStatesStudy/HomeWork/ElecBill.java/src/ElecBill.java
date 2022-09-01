@@ -15,7 +15,7 @@ import java.util.Scanner;
 // 400kWh 초과는 417.7원
 // 500kWh 초과는 670.6원
 
-public class ElectricityBill { // 메인 메소드가 있는 클래스
+public class ElecBill { // 메인 메소드가 있는 클래스
     public static void main(String[] args) {
         Print a = new Print();
         a.print(); // 출력 인스턴스
