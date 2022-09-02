@@ -160,6 +160,7 @@ public class ArrayStudy {
         }
         return String.format("(%s)%s-%s", head, body, tail);
     }
+
     public static int[] fibonacci(int num) {
         int[] array = new int[num + 1];
 
@@ -173,10 +174,10 @@ public class ArrayStudy {
         return array;
     }
 
-
     public static void main(String[] args) {
         int[] arr1 = {1, 2, 4, 5};
         int[] arr2 = {0, 9, 8, 7, 8, 9};
+//        ArrayStudy.createPhoneNumber(arr1);
 
         System.out.println(Arrays.toString(getAllElementsButFirst(arr2)));
         System.out.println("arr2 = " + Arrays.toString(arr2));
