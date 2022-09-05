@@ -14,7 +14,7 @@ class Childtest2 extends Parentstest {
     }
 }
 
-public class test {
+public class InheritStudy {
     public static void main(String[] args) {
         Parentstest a = new Parentstest();
          if (a instanceof Childtest) {

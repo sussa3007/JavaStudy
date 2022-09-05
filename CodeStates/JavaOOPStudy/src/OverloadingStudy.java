@@ -25,7 +25,7 @@ class OverloadTest{
 }
 
 
-public class test {
+public class OverloadingStudy {
     public static void main(String[] args) {
         OverloadTest ot = new OverloadTest();
         ot.print();

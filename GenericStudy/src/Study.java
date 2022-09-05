@@ -1,3 +1,5 @@
+package GenericStudy.src;
+
 import java.util.ArrayList;
 
 interface Thisinfo { String info();}
