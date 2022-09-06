@@ -4,26 +4,23 @@ public class SynchronizationWaitNotfy {
 
         new Thread(new Withdraw01(ac,"A")).start();
         new Thread(new Withdraw01(ac,"B")).start();
-        new Thread(new Deposit01(ac)).start();
+//        new Thread(new Deposit01(ac)).start();
 
     }
 }
 
 class Account_1 {
-    static final int BALANCE = 700;
-    public static int balance = 2000;
+    private static final int BALANCE = 700;
+    private static int balance = 2000;
 
     public synchronized int getBalance() {
         return balance;
     }
 
     public synchronized void withdraw(int money,String name){
+        notify();
         while (balance <= money){
             System.out.println("Withdraw Waiting");
-            try {
-                wait();
-                Thread.sleep(500);
-            }catch (InterruptedException e){}
         }
         while (true){
             if(balance >= 0){
@@ -31,22 +28,25 @@ class Account_1 {
                 balance -= money;
                 System.out.println(name + " Withdraw : "+ money);
                 System.out.println(getBalance());
-                notify();
             }
-        }
-
-    }
-    public void deposit(int money){
-        while(balance <= BALANCE){
             try {
                 wait();
                 Thread.sleep(500);
             }catch (InterruptedException e){}
+        }
+
+    }
+    public synchronized void deposit(int money){
+        while(balance <= BALANCE){
+            notify();
             System.out.println("Wait a Minute");
         }
         try { Thread.sleep(500);} catch(InterruptedException e) {}
         balance += money;
-        notify();
+        try {
+            wait();
+            Thread.sleep(500);
+        }catch (InterruptedException e){}
         System.out.println("Deposit : "+ money);
     }
 }
