@@ -18,20 +18,10 @@ class Motor1 implements Information1{
         setTire(tire);
         setMuffler(muffler);
     }
-    Motor1 (String body, String brake, int tire,int muffler,String smartkey){
-        setBody(body);
-        setBrake(brake);
-        setTire(tire);
-        setMuffler(muffler);
-        setSmartkey(smartkey);
-    }
+
 
     private void getInfo() { //출력값 정의
-        System.out.println("======= Bike 정보 =======");
-        System.out.println(getBody() + " 타입 바디");
-        System.out.println(getBrake() + " 타입 브레이크");
-        System.out.println(getTire() + " 개의 타이어");
-        System.out.println("=========================");
+        System.out.printf(" Bike =  %s 타입 바디, %d 개의 타이어, %s 타입의 브레이크 %n",getBody(),getTire(),getBrake());
     }
     private void setBody(String body) {
         this.body = body;
@@ -43,14 +33,10 @@ class Motor1 implements Information1{
         this.tire = tire;
     }
     private void setMuffler(int muffler) { this.muffler = muffler; }
-    private void setSmartkey(String smartkey) {
-        this.smartkey = smartkey;
-    }
     public  String getBody() {return body;} // 변수값 반환
     public  String getBrake() {return brake;}
     public  int getTire() {return tire;}
     public  int getMuffler() {return muffler;}
-    public  String getSmartkey() {return smartkey;}
     public  void info() {getInfo();}  //출력
 }
 
@@ -60,29 +46,25 @@ class MotorBike1 extends Motor1  {
     }
     public void info() {getInfo();} // 정보출력
     private void getInfo(){ //출력값 정의
-        System.out.println("======= Bike 정보 =======");
-        System.out.println(getBody() + " 타입 바디");
-        System.out.println(getBrake() + " 타입 브레이크");
-        System.out.println(getTire() + " 개의 타이어");
-        System.out.println(getMuffler() + " 개의 머플러");
-        System.out.println("=========================");
+        System.out.printf(" Bike =  %s 타입 바디, %d 개의 타이어, %s 타입의 브레이크, %d 개의 머플러 %n",getBody(),getTire(),getBrake(),getMuffler());
+
     }
 
 }
 class MotorBike2 extends Motor1 {
+    String smartkey;
     MotorBike2 (String body, String brake, int tire,int muffler,String smartkey){ //생성자
-        super(body,brake,tire,muffler,smartkey);
+        super(body,brake,tire,muffler);
+        setSmartkey(smartkey);
     }
     public void info() {getInfo();}//정보출력
     private void getInfo() {  //출력값 정의
-        System.out.println("======= Bike 정보 =======");
-        System.out.println(getBody() + " 타입 바디");
-        System.out.println(getBrake() + " 타입 브레이크");
-        System.out.println(getTire() + " 개의 타이어");
-        System.out.println(getSmartkey() + " 타입의 부트");
-        System.out.println(getMuffler() + " 개의 머플러");
-        System.out.println("=========================");
+        System.out.printf(" Bike =  %s 타입 바디, %d 개의 타이어, %s 타입의 브레이크, %d 개의 머플러, %s 타입의 부트 %n",getBody(),getTire(),getBrake(),getMuffler(),getSmartkey());
     }
+    private void setSmartkey(String smartkey) {
+        this.smartkey = smartkey;
+    }
+    public  String getSmartkey() {return smartkey;}
 
 }
 class PrintInfo1 { //별도의 출력 클래스 생성

@@ -105,14 +105,11 @@ public class Polymorphism {
         Motor gi = new Motor("x","y",2);
         Motor gt = new MotorBike("a","b",8,4);
         Motor gt2 = new Motorsmart("a2","b2",2,"Key");
+//        Motorsmart gt2 = (Motorsmart) new Motor("a2","b2",2); 애러발생
 
         PrintInfo print = new PrintInfo();
         print.printinfo(gi);
         print.printinfo(gt);
         print.printinfo(gt2);
-        // Exception in thread "main" java.lang.NoClassDefFoundError
-        // 왜 파일의 코드만 복사해서 파일을 지웠다가 다시 만들어 복사하니 실행되는가?
-        // 왜 에러가 발생한 브레이크 포인트 클래스 이름은 Motorcycle Wrong neme :MotorCycle 이렇게 뜨는거지?
-        // 이름이 문제였나?
     }
 }
