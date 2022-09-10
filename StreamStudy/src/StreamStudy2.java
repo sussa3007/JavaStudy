@@ -4,18 +4,19 @@ import java.util.stream.Stream;
 public class StreamStudy2 {
           public static void main(String[] args) {
             Stream<Student> studentStream = Stream.of(
-                    new Student("���ڹ�", 3, 300),
-                    new Student("���ڹ�", 1, 200),
-                    new Student("���ڹ�", 2, 100),
-                    new Student("���ڹ�", 2, 150),
-                    new Student("���ڹ�", 1, 200),
-                    new Student("���ڹ�", 3, 290),
-                    new Student("���ڹ�", 3, 180)
+                    new Student("Lee", 3, 300),
+                    new Student("Park", 1, 200),
+                    new Student("Yu", 2, 100),
+                    new Student("Kim", 2, 150),
+                    new Student("Park2", 1, 200),
+                    new Student("Kim2", 3, 290),
+                    new Student("Lee2", 3, 180)
             );
 
-            studentStream.sorted(Comparator.comparing(Student::getBan) // �ݺ� ����
-                            .thenComparing(Comparator.naturalOrder()))     	// �⺻ ����
-                    .forEach(System.out::println);
+            studentStream.sorted(Comparator.comparing(Student::getBan)
+                         .thenComparing(Comparator.naturalOrder()))
+                    // 반별 기본 정렬 기준으로 정렬 후에 Student 클래스의 기본 정렬 기준으로 다시 정렬
+                         .forEach(System.out::println);
         }
     }
 
@@ -37,8 +38,7 @@ public class StreamStudy2 {
         int getBan()         { return ban;}
         int getTotalScore()  { return totalScore;}
 
-        // ���� ���������� �⺻ ���ķ� �Ѵ�.
-        public int compareTo(Student s) {
-            return s.totalScore - this.totalScore;
-        }
+        public int compareTo(Student s) { return s.totalScore - this.totalScore; }
+        // Student 클래스의 Comparable을 구현함
+        // totalScore 내림차순 정렬
     }
