@@ -1,4 +1,4 @@
-package LambdaStudy;
+package LambdaExpressionStudy.src.LambdaStudy;
 @FunctionalInterface
 interface MyFunction {
     void run();  // public abstract void run();
