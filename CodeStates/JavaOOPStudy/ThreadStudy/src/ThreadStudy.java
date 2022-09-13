@@ -1,3 +1,5 @@
+package CodeStates.JavaOOPStudy.ThreadStudy.src;
+
 class ThreadOne extends Thread {
     @Override
     public void run() {

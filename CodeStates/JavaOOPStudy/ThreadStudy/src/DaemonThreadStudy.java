@@ -1,3 +1,5 @@
+package CodeStates.JavaOOPStudy.ThreadStudy.src;
+
 public class DaemonThreadStudy implements Runnable  {
     static boolean autoSave = false;
 

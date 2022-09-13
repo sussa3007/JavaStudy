@@ -1,5 +1,6 @@
+package CodeStates.JavaOOPStudy.ThreadStudy.src;
 
- public class ThreadStudy2 {
+public class ThreadStudy2 {
     static long startTime = 0;
     public static void main(String args[]) {
         ThreadEx_1 th1 = new ThreadEx_1();

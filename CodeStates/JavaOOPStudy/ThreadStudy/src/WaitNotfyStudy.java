@@ -1,3 +1,5 @@
+package CodeStates.JavaOOPStudy.ThreadStudy.src;
+
 import java.util.ArrayList;
 
 class Customer implements Runnable {

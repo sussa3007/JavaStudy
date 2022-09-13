@@ -1,3 +1,5 @@
+package CodeStates.JavaOOPStudy.ThreadStudy.src;
+
 public class WaitNotify_1 {
     public static void main(String[] args) throws InterruptedException {
         WorkPool work = new WorkPool();

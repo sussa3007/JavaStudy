@@ -1,3 +1,5 @@
+package CodeStates.JavaOOPStudy.ThreadStudy.src;
+
 public class SynchronizationStudy {
     public static void main(String args[]) {
         Runnable r = new Withdraw_1();

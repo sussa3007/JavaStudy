@@ -1,4 +1,4 @@
-package CollectionsFrameworkStudy.CollectionsFramework;
+package CodeStates.CollectionsFramework;
 
 import java.util.ArrayList;
 import java.util.Iterator;

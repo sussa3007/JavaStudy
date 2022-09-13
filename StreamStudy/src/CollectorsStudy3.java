@@ -1,3 +1,5 @@
+package StreamStudy.src;
+
 import java.util.ArrayList;
 import java.util.*;
 import java.util.stream.Stream;

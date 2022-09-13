@@ -1,3 +1,5 @@
+package CodeStates.JavaOOPStudy.ThreadStudy.src;
+
 public class SynchronizationWaitNotfy {
     public static void main(String args[]) {
         Account_1 ac= new Account_1();

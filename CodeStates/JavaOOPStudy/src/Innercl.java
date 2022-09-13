@@ -1,3 +1,5 @@
+package CodeStates.JavaOOPStudy.src;
+
 class Outer { //외부 클래스
     private int num = 1; //외부 클래스 인스턴스 변수
     private static int sNum = 2; // 외부 클래스 정적 변수

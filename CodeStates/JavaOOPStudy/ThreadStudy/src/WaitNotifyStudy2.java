@@ -1,3 +1,5 @@
+package CodeStates.JavaOOPStudy.ThreadStudy.src;
+
 import java.util.ArrayList;
 class Customer2 implements Runnable {
     private Table2  table;
