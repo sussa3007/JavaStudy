@@ -133,12 +133,12 @@ public class CollectionsQuiz {
         else arrayList.add(index,element);  return arrayList;
     }
     public ArrayList<String> addLast(ArrayList<String> arrayList, String str) {
-        //TODO..
         arrayList.add(str);
         return arrayList;
     }
     public String getLastElement(ArrayList<String> arrayList) {
-        if (arrayList.isEmpty()) return null; else return arrayList.get(arrayList.size()-1);
+        if (arrayList.isEmpty()) return null;
+        return arrayList.get(arrayList.size()-1);
     }
 }
 class CollectionsQuiz1 {

@@ -2,6 +2,7 @@ package StreamStudy.src;
 
 import java.util.ArrayList;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Comparator.comparingInt;
@@ -78,6 +79,13 @@ public class CollectorsStudy3 {
                                 // maxBy는 Optional 객체를 반환 하므로 값을 꺼내 반환
         System.out.println("남자 1등 = "+ stuMaleScore.get(true));
         System.out.println("여자 1등 = "+ stuMaleScore.get(false));
+
+        System.out.println();
+        Set<Student4> stuMale1 =Stream.of(stuArr).filter(Student4::isMale) // true= 남자
+                .collect(Collectors.toCollection(HashSet::new));// 남자만 뽑아서 set 생성
+        stuMale1.forEach(n->System.out.println(n.getName()));
+
+
 
     }
 }
