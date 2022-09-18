@@ -4,7 +4,7 @@
 // 첫자리 숫자 음수는 계산되지 않고
 // 연산자의 연속 입력 가능
 // 곱샘 나누샘의 우선순위 부재
-package A1_materializeShape;
+package Calculator.src.A1_materializeShape;
 
 import javax.swing.*;
 import java.awt.*;

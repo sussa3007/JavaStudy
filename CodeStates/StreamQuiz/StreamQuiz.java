@@ -21,7 +21,7 @@ public class StreamQuiz {
     }
     public double computeAverageOfNumbers(List<Integer> list) {
         // 입력받은 수의 평균
-        return list.isEmpty() ? 0 : list.stream().mapToInt(Integer::intValue).average().orElse(0);
+        return list.isEmpty() ? 0 : list.stream().mapToInt(i->i).average().orElse(0);
     }
     public List<Integer> filterOddNumbers(List<Integer> list){
         //2의 배수만 리스트로 출력
@@ -51,7 +51,7 @@ public class StreamQuiz {
     public double computeAverageOfMaleMember(List<Member1> members) {
         //남자회원의 나이 평균
         return members.stream().filter(m->m.getGender().equals("Male")).mapToInt(Member1::getAge).average().orElse(0);
-    }
+    }   // 다시해보기
     static class Member1 {
         String name;
         String gender;
@@ -92,12 +92,15 @@ public class StreamQuiz {
         return  strArr.length==0 ? 0 : Arrays.stream(strArr).mapToInt(String::length).max().orElse(0);
     }
     public List<String> mergeTwoStream(List<String> list1, List<String> list2) {
+        // 두개의 스트림을 하나의 스트림으로 합치고 리스트타입으로 반환
         return Stream.concat(list1.stream(),list2.stream()).collect(Collectors.toList());
     }
     public List<Integer> makeElementDouble(List<Integer> list) {
+        // 리스트의 요소를 2를 곱하고 리스트타입으로 반환
         return list.stream().map(i->i*2).collect(Collectors.toList());
     }
     public boolean isHot(int[] temperature) {
+        // 배열의 길이가 7이고 배열의 요소를 스트림으로 뽑아 30보다 크거나 같은요소가 3개이상이면 트루 반환
         return temperature.length == 7 && Arrays.stream(temperature).filter(i -> i >= 30).count() >= 3;
     }
     public List<String> findPeople(List<String> male, List<String> female, String lastName) {
