@@ -6,9 +6,11 @@ public class RecursiveFunction {
     private static int countFactTail =0;
     private static int countFact =0;
     public static void main(String[] args) {
-        System.out.println("30 th fibonacci : "+fibonacciTail(30,0,1));
+        System.out.println("30 th fibonacci Tail : "+fibonacciTail(30,0,1));
         System.out.println("fibonacciTail : "+ countFibTail);
         System.out.println("30 th fibonacci : "+fibonacci(30));
+        System.out.println("fibonacci : "+ countFib);
+        System.out.println("30 th fibonacci Memo: "+fibonacci(30));
         System.out.println("fibonacci : "+ countFib);
 
 //        long beforeTime = System.currentTimeMillis();
